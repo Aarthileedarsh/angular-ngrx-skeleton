@@ -24,53 +24,53 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Application structure
 
-├── app
- │ ├── app-routing.module.ts
- │ ├── app.component.css
- │ ├── app.component.html
- │ ├── app.component.ts
- │ ├── app.module.ts
- │ ├── components
- │ │    └── home
- │ │    └── navbar
- │ ├── containers
- │ │    └── accounts
- │ │         ├── account.component.css
- │ │         ├── account.component.html
- │ │         └── account.component.ts
- │ ├── models
- │ │    ├── index.ts
- │ │    └── account.model.ts
- │ └── services
- │ │    ├── index.ts
- │ │    └── account.service.ts
- │ ├── app-store
- │ │    ├── index.ts
- │ │    ├── app-store.module.ts
- │ │    ├── selectors.ts
- │ │    ├── state.ts
- │ │    └── account-store
- │ │         ├── actions.ts
- │ │         ├── effects.ts
- │ │         ├── index.ts
- │ │         ├── reducer.ts
- │ │         ├── selectors.ts
- │ │         ├── state.ts
- │ │         └── account-store.module.ts
- │ ├── shared
- │ │    └── utils.ts
- ├── assets
- ├── browserslist
- ├── environments
- │ ├── environment.prod.ts
- │ └── environment.ts
- ├── index.html
- ├── main.ts
- ├── polyfills.ts
- ├── styles.css
- ├── test.ts
- ├── tsconfig.app.json
- ├── tsconfig.spec.json
- ├── Dockerfile
- ├── docker-compose
- └── tslint.json
+├── app\
+ │ ├── app-routing.module.ts\
+ │ ├── app.component.css\
+ │ ├── app.component.html\
+ │ ├── app.component.ts\
+ │ ├── app.module.ts\
+ │ ├── components\
+ │ │    └── home\
+ │ │    └── navbar\
+ │ ├── containers\
+ │ │    └── accounts\
+ │ │         ├── account.component.css\
+ │ │         ├── account.component.html\
+ │ │         └── account.component.ts\
+ │ ├── models\
+ │ │    ├── index.ts\
+ │ │    └── account.model.ts\
+ │ └── services\
+ │ │    ├── index.ts\
+ │ │    └── account.service.ts\
+ │ ├── app-store\
+ │ │    ├── index.ts\
+ │ │    ├── app-store.module.ts\
+ │ │    ├── selectors.ts\
+ │ │    ├── state.ts\
+ │ │    └── account-store\
+ │ │         ├── actions.ts\
+ │ │         ├── effects.ts\
+ │ │         ├── index.ts\
+ │ │         ├── reducer.ts\
+ │ │         ├── selectors.ts\
+ │ │         ├── state.ts\
+ │ │         └── account-store.module.ts\
+ │ ├── shared\
+ │ │    └── utils.ts\
+ ├── assets\
+ ├── browserslist\
+ ├── environments\
+ │ ├── environment.prod.ts\
+ │ └── environment.ts\
+ ├── index.html\
+ ├── main.ts\
+ ├── polyfills.ts\
+ ├── styles.css\
+ ├── test.ts\
+ ├── tsconfig.app.json\
+ ├── tsconfig.spec.json\
+ ├── Dockerfile\
+ ├── docker-compose\
+ └── tslint.json\
