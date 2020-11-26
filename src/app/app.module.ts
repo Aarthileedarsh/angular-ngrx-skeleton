@@ -7,6 +7,9 @@ import { AccountsModule } from './containers/accounts/accounts.module';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AppStoreModule } from './app-store/app-store.module';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterStateSerializer } from "@ngrx/router-store";
+import { CustomSerializer } from "./shared/utils";
 
 @NgModule({
   declarations: [
@@ -18,9 +21,10 @@ import { AppStoreModule } from './app-store/app-store.module';
     BrowserModule,
     AppRoutingModule,
     AccountsModule,
-    AppStoreModule
+    AppStoreModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [{ provide: RouterStateSerializer, useClass: CustomSerializer }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
