@@ -4,7 +4,7 @@ This project is a skeleton to help you start quickly with redux pattern in angul
 
 ## Run with docker-compose
 
-Run `docker-compose up --build -d` for a dev server. Navigate to `http://localhost:4202/`. The app will automatically reload if you change any of the source files.
+Run `docker-compose up --build -d` for a dev server. Navigate to `http://localhost:4202/`. The app will automatically reload if you change any of the source files.\
 You need to create a API which can handle CRUD of a resource (Account in our case)
 
 ## Stop and remove app image
