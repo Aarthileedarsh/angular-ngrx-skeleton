@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { AccountStoreActions, AccountStoreSelectors, AppStoreState } from 'src/app/app-store';
 import { Account } from 'src/app/models';
 
 @Component({
@@ -13,7 +15,8 @@ export class AccountEditComponent implements OnInit {
   accountForm: FormGroup;
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private store: Store<AppStoreState.State>
   ) { }
 
   ngOnInit(): void {
@@ -23,7 +26,9 @@ export class AccountEditComponent implements OnInit {
       email: ["", Validators.required],
     })
 
-    const account$: Observable<Account> = null;
+    const account$: Observable<Account> = this.store.select(
+      AccountStoreSelectors.getCurrentAccount
+    )
 
     account$.subscribe(currentAccount => {
       if(currentAccount){
@@ -42,6 +47,8 @@ export class AccountEditComponent implements OnInit {
       lastname: this.accountForm.get("lastname").value,
       email: this.accountForm.get("email").value,
     }
+
+    this.store.dispatch(new AccountStoreActions.UpdateAccount(updatedAccount))
 
     this.accountForm.reset();
   }

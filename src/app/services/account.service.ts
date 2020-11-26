@@ -13,7 +13,7 @@ export class AccountService {
 
   constructor(private http: HttpClient) {}
 
-  getAccountes(): Observable<any> {
+  getAccounts(): Observable<any> {
     return this.http.get<Account[]>(this.accountsUrl);
   }
 

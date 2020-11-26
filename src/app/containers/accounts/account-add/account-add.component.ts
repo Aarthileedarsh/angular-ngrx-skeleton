@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Store } from '@ngrx/store';
+import { AccountStoreActions, AppStoreState } from 'src/app/app-store';
 import { Account } from 'src/app/models';
 
 @Component({
@@ -12,7 +14,8 @@ export class AccountAddComponent implements OnInit {
   accountForm: FormGroup;
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private store: Store<AppStoreState.State>
   ) { }
 
   ngOnInit(): void {
@@ -29,6 +32,8 @@ export class AccountAddComponent implements OnInit {
       lastname: this.accountForm.get("lastname").value,
       email: this.accountForm.get("email").value,
     }
+
+    this.store.dispatch(new AccountStoreActions.CreateAccount(newAccount));
 
     this.accountForm.reset();
   }
