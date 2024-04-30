@@ -19,3 +19,6 @@ RUN npm install -g @angular/cli@7.3.9
 
 # start app
 CMD ng serve --host 0.0.0.0
+
+#port no
+EXPOSE 80
